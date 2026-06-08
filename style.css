@@ -1,0 +1,270 @@
+/* Base Variables & Reset */
+:root {
+    --primary-blue: #0A4D92;
+    --secondary-blue: #1C7ED6;
+    --light-blue: #E7F5FF;
+    --dark-navy: #0B2240;
+    --text-color: #334155;
+    --white: #ffffff;
+    --gray-bg: #F8FAFC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--white);
+    border-bottom: 1px solid #E2E8F0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-navy);
+}
+
+.logo-accent {
+    color: var(--primary-blue);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--primary-blue);
+}
+
+nav a.nav-btn {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+nav a.nav-btn:hover {
+    background-color: var(--secondary-blue);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--dark-navy) 0%, var(--primary-blue) 100%);
+    color: var(--white);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+/* Custom Buttons */
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: var(--secondary-blue);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #228BE6;
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--primary-blue);
+}
+
+.btn-secondary:hover {
+    background-color: var(--light-blue);
+}
+
+/* Core Features Section */
+.features {
+    padding: 80px 0;
+    background-color: var(--gray-bg);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--dark-navy);
+    margin-bottom: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(10, 77, 146, 0.08);
+}
+
+.card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--dark-navy);
+}
+
+/* Comparison Data Table */
+.comparison-section {
+    padding: 80px 0;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.compare-table th {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 16px;
+    font-weight: 600;
+}
+
+.compare-table td {
+    padding: 16px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.compare-table tr:nth-child(even) {
+    background-color: var(--gray-bg);
+}
+
+/* Final Call To Action Section */
+.final-cta {
+    background-color: var(--light-blue);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.final-cta h2 {
+    color: var(--dark-navy);
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+}
+
+.final-cta p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Footer layout */
+footer {
+    background-color: var(--dark-navy);
+    color: #94A3B8;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .disclaimer {
+    font-size: 0.8rem;
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+    line-height: 1.4;
+}
+
+/* Mobile Breakpoints */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav a {
+        margin: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+}
